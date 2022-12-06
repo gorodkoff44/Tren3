@@ -1,0 +1,61 @@
+﻿<Page x:Class="Tren3.StroyPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Tren3"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StroyPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <WrapPanel>
+            <TextBlock Text="Поиск " VerticalAlignment="Center" />
+            <TextBox x:Name="SearchBox" Width="160" Height="40" Margin="10" HorizontalAlignment="Left" VerticalContentAlignment="Center" TextChanged="SearchBox_TextChanged"/>
+        </WrapPanel>
+        <TextBlock Text="Результаты поиска:" VerticalAlignment="Bottom"  HorizontalAlignment="Center" Visibility="Collapsed" x:Name="rezsearchtb"/>
+        <ListView Grid.Row="1" x:Name="LVStroy">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <StackPanel Margin="20">
+                            <WrapPanel>
+                                <TextBlock Text="Номер материала " />
+                                <TextBlock Text="{Binding NumMateriala}" />
+                            </WrapPanel>
+                            <WrapPanel>
+                                <TextBlock Text="Наименование " />
+                                <TextBlock Text="{Binding Name}" />
+                            </WrapPanel>
+                            <WrapPanel>
+                                <TextBlock Text="Единица измерения " />
+                                <TextBlock Text="{Binding EdIzm}" />
+                            </WrapPanel>
+                            <WrapPanel>
+                                <TextBlock Text="Остаток: " />
+                                <TextBlock Text="{Binding Ostatok}" />
+                            </WrapPanel>
+                            <WrapPanel>
+                                <TextBlock Text="Номер склада: " />
+                                <TextBlock Text="{Binding IDSklad}" />
+                            </WrapPanel>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+
+        </ListView>
+        <Grid Grid.Row="2">
+            <WrapPanel HorizontalAlignment="Right">
+                <Button x:Name="add" Content="Добавить" Click="add_Click" Width="100" Height="30" Margin="0 0 10 0" />
+                <Button x:Name="del" Content="Удалить" Click="del_Click" Width="100" Height="30" Margin="0 0 10 0" />
+            </WrapPanel>
+        </Grid>
+    </Grid>
+</Page>
