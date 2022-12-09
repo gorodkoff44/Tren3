@@ -33,6 +33,7 @@ namespace Tren3
             {
                 Tren3Entities.GetContext().Sklad.Add(_context);
                 Tren3Entities.GetContext().SaveChanges();
+                MessageBox.Show("Успешно сохранено");
                 NavigationService.GoBack();
             }
             catch

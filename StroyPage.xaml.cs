@@ -24,6 +24,17 @@ namespace Tren3
         public StroyPage()
         {
             InitializeComponent();
+            Login login = new Login();
+            if (login.tlogin == 0)
+            {
+                add.Visibility = Visibility.Collapsed;
+                del.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                add.Visibility = Visibility.Visible;
+                del.Visibility = Visibility.Visible;
+            }
             LVStroy.ItemsSource = _context.StroyMaterial.ToList();
         }
         private void UpdateStroy()

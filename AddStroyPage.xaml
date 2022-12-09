@@ -19,16 +19,16 @@
                 <TextBox Text="{Binding Name}" Width="150" />
             </WrapPanel>
             <WrapPanel>
-                <TextBlock Width="150" Text="Расстояние " />
+                <TextBlock Width="150" Text="Единица измерения " />
                 <TextBox Text="{Binding EdIzm}" Width="150" />
             </WrapPanel>
             <WrapPanel>
-                <TextBlock Width="150" Text="Расстояние " />
+                <TextBlock Width="150" Text="Остаток " />
                 <TextBox Text="{Binding Ostatok}" Width="150" />
             </WrapPanel>
             <WrapPanel>
-                <TextBlock Width="150" Text="Расстояние " />
-                <ComboBox x:Name="ComboSklad" DisplayMemberPath="NumSklad" SelectedItem="{Binding IDSklad}" />
+                <TextBlock Width="150" Text="Номер склада " />
+                <TextBox Text="{Binding IDSklad}" Width="150" />
             </WrapPanel>
             <Button x:Name="Save" Content="Сохранить" Width="150" Click="Save_Click"/>
         </StackPanel>

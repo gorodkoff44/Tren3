@@ -23,7 +23,19 @@ namespace Tren3
         private Tren3Entities _context = new Tren3Entities();
         public SkladPage()
         {
+            
             InitializeComponent();
+            Login login = new Login();
+            if (login.tlogin == 0)
+            {
+                add.Visibility = Visibility.Collapsed;
+                del.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                    add.Visibility = Visibility.Visible;
+                    del.Visibility = Visibility.Visible;
+            }
             LVSklad.ItemsSource = _context.Sklad.ToList();
         }
         private void UpdateSklad()

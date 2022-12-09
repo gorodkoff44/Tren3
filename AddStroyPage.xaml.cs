@@ -20,20 +20,33 @@ namespace Tren3
     /// </summary>
     public partial class AddStroyPage : Page
     {
-        private Tren3Entities _context = new Tren3Entities();
         private StroyMaterial currentStroy = new StroyMaterial();
         public AddStroyPage()
         {
             InitializeComponent();
-            ComboSklad.ItemsSource = _context.Sklad.ToList();
+            
             DataContext = currentStroy;
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            Tren3Entities.GetContext().StroyMaterial.Add(currentStroy);
-            Tren3Entities.GetContext().SaveChanges();
-            NavigationService.GoBack();
+            try
+            {
+                Tren3Entities.GetContext().StroyMaterial.Add(currentStroy);
+                Tren3Entities.GetContext().SaveChanges();
+                MessageBox.Show("Успешно сохранено");
+                NavigationService.GoBack();
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка. Возможно вы указали несуществующий склад");
+                //NavigationService.GoBack();
+            }
+        }
+
+        private void ComboSklad_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
