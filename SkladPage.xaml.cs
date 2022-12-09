@@ -20,7 +20,7 @@ namespace Tren3
     /// </summary>
     public partial class SkladPage : Page
     {
-        private DbEntities _context = new DbEntities();
+        private Tren3Entities _context = new Tren3Entities();
         public SkladPage()
         {
             InitializeComponent();

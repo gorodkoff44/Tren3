@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище ModelContainer" CdmEntityContainer="DbEntities">
+  <EntityContainerMapping StorageEntityContainer="Хранилище Tren3ModelContainer" CdmEntityContainer="Tren3Entities">
     <EntitySetMapping Name="Sklad">
-      <EntityTypeMapping TypeName="Model.Sklad">
+      <EntityTypeMapping TypeName="Tren3Model.Sklad">
         <MappingFragment StoreEntitySet="Sklad">
           <ScalarProperty Name="NumSklad" ColumnName="NumSklad" />
           <ScalarProperty Name="Address" ColumnName="Address" />
@@ -12,7 +12,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="StroyMaterial">
-      <EntityTypeMapping TypeName="Model.StroyMaterial">
+      <EntityTypeMapping TypeName="Tren3Model.StroyMaterial">
         <MappingFragment StoreEntitySet="StroyMaterial">
           <ScalarProperty Name="NumMateriala" ColumnName="NumMateriala" />
           <ScalarProperty Name="Name" ColumnName="Name" />

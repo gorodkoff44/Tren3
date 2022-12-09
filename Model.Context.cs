@@ -13,10 +13,10 @@ namespace Tren3
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DbEntities : DbContext
+    public partial class Tren3Entities : DbContext
     {
-        public DbEntities()
-            : base("name=DbEntities")
+        public Tren3Entities()
+            : base("name=Tren3Entities")
         {
         }
     
