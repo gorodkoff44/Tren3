@@ -15,11 +15,18 @@ namespace Tren3
     
     public partial class Tren3Entities : DbContext
     {
+        private static Tren3Entities _context;
         public Tren3Entities()
             : base("name=Tren3Entities")
         {
         }
-    
+        public static Tren3Entities GetContext()
+        {
+            if (_context == null)
+                _context = new Tren3Entities();
+            return _context;
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

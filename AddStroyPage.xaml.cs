@@ -16,29 +16,24 @@ using System.Windows.Shapes;
 namespace Tren3
 {
     /// <summary>
-    /// Логика взаимодействия для AddSkladPage.xaml
+    /// Логика взаимодействия для AddStroyPage.xaml
     /// </summary>
-    public partial class AddSkladPage : Page
+    public partial class AddStroyPage : Page
     {
-        private Sklad _context = new Sklad();
-        public AddSkladPage()
+        private Tren3Entities _context = new Tren3Entities();
+        private StroyMaterial currentStroy = new StroyMaterial();
+        public AddStroyPage()
         {
             InitializeComponent();
-            DataContext = _context;
+            ComboSklad.ItemsSource = _context.Sklad.ToList();
+            DataContext = currentStroy;
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                Tren3Entities.GetContext().Sklad.Add(_context);
-                Tren3Entities.GetContext().SaveChanges();
-                NavigationService.GoBack();
-            }
-            catch
-            {
-                MessageBox.Show("Произошла ошибка!");
-            }
+            Tren3Entities.GetContext().StroyMaterial.Add(currentStroy);
+            Tren3Entities.GetContext().SaveChanges();
+            NavigationService.GoBack();
         }
     }
 }

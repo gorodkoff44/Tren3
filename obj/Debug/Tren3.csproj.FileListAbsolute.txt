@@ -59,3 +59,5 @@ C:\Users\Lenovo\Documents\GitHub\Tren3\obj\Debug\Tren3.csproj.CoreCompileInputs.
 C:\Users\Lenovo\Documents\GitHub\Tren3\obj\Debug\Tren3.csproj.CopyComplete
 C:\Users\Lenovo\Documents\GitHub\Tren3\obj\Debug\Tren3.exe
 C:\Users\Lenovo\Documents\GitHub\Tren3\obj\Debug\Tren3.pdb
+C:\Users\Lenovo\Documents\GitHub\Tren3\obj\Debug\AddStroyPage.g.cs
+C:\Users\Lenovo\Documents\GitHub\Tren3\obj\Debug\AddStroyPage.baml
