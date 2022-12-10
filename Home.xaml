@@ -10,6 +10,11 @@
 
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+<<<<<<< Updated upstream
+=======
+            <!--<TextBlock Text="Вы в упращенном режиме. Войдите, чтобы иметь полный функционал" />
+            <Button Content="Авторизация" x:Name="autorisebtn" Click="autorisebtn_Click" Height="50" Width="90" />-->
+>>>>>>> Stashed changes
             <Button Content="Склад" Width="400" Height="80" Margin="10" x:Name="BtnSklad" Click="BtnSklad_Click" />
             <Button Content="Стройматериалы" Width="400" Height="80" Margin="10" x:Name="BtnStroy" Click="BtnStroy_Click" />
         </StackPanel>

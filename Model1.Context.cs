@@ -13,6 +13,7 @@ namespace Tren3
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
+<<<<<<< Updated upstream:Model1.Context.cs
     public partial class DbEntities : DbContext
     {
         public DbEntities()
@@ -20,6 +21,22 @@ namespace Tren3
         {
         }
     
+=======
+    public partial class Tren3Entities1 : DbContext
+    {
+        private static Tren3Entities1 _context;
+        public Tren3Entities1()
+            : base("name=Tren3Entities1")
+        {
+        }
+        public static Tren3Entities1 GetContext()
+        {
+            if (_context == null)
+                _context = new Tren3Entities1();
+            return _context;
+        }
+
+>>>>>>> Stashed changes:Model.Context.cs
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

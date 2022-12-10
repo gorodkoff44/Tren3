@@ -1,12 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<<<<<<< Updated upstream
 <Schema Namespace="Хранилище Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+=======
+<Schema Namespace="Хранилище Tren3Model1" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+>>>>>>> Stashed changes
   <EntityType Name="Sklad">
     <Key>
       <PropertyRef Name="NumSklad" />
     </Key>
     <Property Name="NumSklad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+<<<<<<< Updated upstream
     <Property Name="Address" Type="nvarchar" MaxLength="100" />
     <Property Name="TypeMaterialiv" Type="nvarchar" MaxLength="100" />
+=======
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="TypeMaterialiv" Type="nvarchar" MaxLength="50" />
+>>>>>>> Stashed changes
     <Property Name="Rasstoyanie" Type="int" />
   </EntityType>
   <EntityType Name="StroyMaterial">
@@ -31,7 +40,11 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+<<<<<<< Updated upstream
   <EntityContainer Name="Хранилище ModelContainer">
+=======
+  <EntityContainer Name="Хранилище Tren3Model1Container">
+>>>>>>> Stashed changes
     <EntitySet Name="Sklad" EntityType="Self.Sklad" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="StroyMaterial" EntityType="Self.StroyMaterial" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_StroyMaterial_Sklad" Association="Self.FK_StroyMaterial_Sklad">

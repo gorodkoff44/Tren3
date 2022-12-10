@@ -4,17 +4,30 @@
 winexe
 C#
 .cs
+<<<<<<< Updated upstream
 C:\Users\comp0705\Desktop\Data\Tren3\WPF\Tren3\obj\Debug\
+=======
+A:\WPF\Tren3\obj\Debug\
+>>>>>>> Stashed changes
 Tren3
 none
 false
 DEBUG;TRACE
+<<<<<<< Updated upstream
 C:\Users\comp0705\Desktop\Data\Tren3\WPF\Tren3\App.xaml
 51326296613
 21750853300
 15617982584
 18741601513
 AddSkladPage.xaml;Home.xaml;MainWindow.xaml;SkladPage.xaml;StroyPage.xaml;
+=======
+A:\WPF\Tren3\App.xaml
+71809248308
+21750853300
+17957680867
+18-119176036
+AddSkladPage.xaml;AddStroyPage.xaml;Home.xaml;Login.xaml;MainWindow.xaml;SkladPage.xaml;StroyPage.xaml;
+>>>>>>> Stashed changes
 
-True
+False
 

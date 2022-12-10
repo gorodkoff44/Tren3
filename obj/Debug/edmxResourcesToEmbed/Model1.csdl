@@ -1,12 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<<<<<<< Updated upstream
 <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+=======
+<Schema Namespace="Tren3Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+>>>>>>> Stashed changes
   <EntityType Name="Sklad">
     <Key>
       <PropertyRef Name="NumSklad" />
     </Key>
     <Property Name="NumSklad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+<<<<<<< Updated upstream
     <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="TypeMaterialiv" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+=======
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TypeMaterialiv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+>>>>>>> Stashed changes
     <Property Name="Rasstoyanie" Type="Int32" />
     <NavigationProperty Name="StroyMaterial" Relationship="Self.FK_StroyMaterial_Sklad" FromRole="Sklad" ToRole="StroyMaterial" />
   </EntityType>
@@ -33,7 +42,11 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+<<<<<<< Updated upstream
   <EntityContainer Name="DbEntities" annotation:LazyLoadingEnabled="true">
+=======
+  <EntityContainer Name="Tren3Entities1" annotation:LazyLoadingEnabled="true">
+>>>>>>> Stashed changes
     <EntitySet Name="Sklad" EntityType="Self.Sklad" />
     <EntitySet Name="StroyMaterial" EntityType="Self.StroyMaterial" />
     <AssociationSet Name="FK_StroyMaterial_Sklad" Association="Self.FK_StroyMaterial_Sklad">

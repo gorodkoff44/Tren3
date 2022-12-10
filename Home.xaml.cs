@@ -34,5 +34,14 @@ namespace Tren3
         {
             NavigationService.Navigate(new Uri("StroyPage.xaml", UriKind.RelativeOrAbsolute));
         }
+<<<<<<< Updated upstream
+=======
+
+        //private void autorisebtn_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Login login = new Login();
+        //    login.Show();
+        //}
+>>>>>>> Stashed changes
     }
 }

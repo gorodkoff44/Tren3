@@ -20,10 +20,28 @@ namespace Tren3
     /// </summary>
     public partial class SkladPage : Page
     {
+<<<<<<< Updated upstream
         private DbEntities _context = new DbEntities();
+=======
+        private Tren3Entities1 _context = new Tren3Entities1();
+>>>>>>> Stashed changes
         public SkladPage()
         {
             InitializeComponent();
+<<<<<<< Updated upstream
+=======
+            //Login login = new Login();
+            //if (login.tlogin == 0)
+            //{
+            //    add.Visibility = Visibility.Collapsed;
+            //    del.Visibility = Visibility.Collapsed;
+            //}
+            //else
+            //{
+            //        add.Visibility = Visibility.Visible;
+            //        del.Visibility = Visibility.Visible;
+            //}
+>>>>>>> Stashed changes
             LVSklad.ItemsSource = _context.Sklad.ToList();
         }
         private void UpdateSklad()

@@ -4,7 +4,11 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
+<<<<<<< Updated upstream:Model1.edmx
       <Schema Namespace="Хранилище Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+=======
+      <Schema Namespace="Хранилище Tren3Model1" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+>>>>>>> Stashed changes:Model.edmx
         <EntityType Name="Sklad">
           <Key>
             <PropertyRef Name="NumSklad" />
@@ -36,7 +40,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< Updated upstream:Model1.edmx
         <EntityContainer Name="Хранилище ModelContainer">
+=======
+        <EntityContainer Name="Хранилище Tren3Model1Container">
+>>>>>>> Stashed changes:Model.edmx
           <EntitySet Name="Sklad" EntityType="Self.Sklad" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StroyMaterial" EntityType="Self.StroyMaterial" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_StroyMaterial_Sklad" Association="Self.FK_StroyMaterial_Sklad">
@@ -48,7 +56,11 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
+<<<<<<< Updated upstream:Model1.edmx
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+=======
+      <Schema Namespace="Tren3Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+>>>>>>> Stashed changes:Model.edmx
         <EntityType Name="Sklad">
           <Key>
             <PropertyRef Name="NumSklad" />
@@ -82,7 +94,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< Updated upstream:Model1.edmx
         <EntityContainer Name="DbEntities" annotation:LazyLoadingEnabled="true">
+=======
+        <EntityContainer Name="Tren3Entities1" annotation:LazyLoadingEnabled="true">
+>>>>>>> Stashed changes:Model.edmx
           <EntitySet Name="Sklad" EntityType="Self.Sklad" />
           <EntitySet Name="StroyMaterial" EntityType="Self.StroyMaterial" />
           <AssociationSet Name="FK_StroyMaterial_Sklad" Association="Self.FK_StroyMaterial_Sklad">
@@ -95,9 +111,15 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+<<<<<<< Updated upstream:Model1.edmx
         <EntityContainerMapping StorageEntityContainer="Хранилище ModelContainer" CdmEntityContainer="DbEntities">
           <EntitySetMapping Name="Sklad">
             <EntityTypeMapping TypeName="Model.Sklad">
+=======
+        <EntityContainerMapping StorageEntityContainer="Хранилище Tren3Model1Container" CdmEntityContainer="Tren3Entities1">
+          <EntitySetMapping Name="Sklad">
+            <EntityTypeMapping TypeName="Tren3Model1.Sklad">
+>>>>>>> Stashed changes:Model.edmx
               <MappingFragment StoreEntitySet="Sklad">
                 <ScalarProperty Name="NumSklad" ColumnName="NumSklad" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
@@ -107,7 +129,11 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="StroyMaterial">
+<<<<<<< Updated upstream:Model1.edmx
             <EntityTypeMapping TypeName="Model.StroyMaterial">
+=======
+            <EntityTypeMapping TypeName="Tren3Model1.StroyMaterial">
+>>>>>>> Stashed changes:Model.edmx
               <MappingFragment StoreEntitySet="StroyMaterial">
                 <ScalarProperty Name="NumMateriala" ColumnName="NumMateriala" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
