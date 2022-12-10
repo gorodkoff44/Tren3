@@ -37,6 +37,7 @@ namespace Tren3
             //        del.Visibility = Visibility.Visible;
             //}
             LVSklad.ItemsSource = _context.Sklad.ToList();
+            UpdateSklad();
         }
         private void UpdateSklad()
         {
@@ -46,7 +47,7 @@ namespace Tren3
                 LVSklad.ItemsSource = currentSklad;
             }
         }
-        private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
+        public void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             UpdateSklad();
             if (SearchBox.Text == "") //спрятать текстблок "результаты поиска"
@@ -59,7 +60,8 @@ namespace Tren3
 
         private void add_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("AddSkladPage.xaml", UriKind.RelativeOrAbsolute));
+            //NavigationService.Navigate(new Uri("/Pages/AddSkladPage.xaml", UriKind.RelativeOrAbsolute));
+            NavigationService.Navigate(new AddSkladPage());
         }
 
         private void del_Click(object sender, RoutedEventArgs e)
@@ -74,6 +76,14 @@ namespace Tren3
             {
                 MessageBox.Show("Похоже в этом складе остались стройматериалы, удалите их и повторите попытку","Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new EditSkladPage((sender as Button).DataContext as Sklad));
+            
+            
+           
         }
     }
 }

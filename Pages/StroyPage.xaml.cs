@@ -58,7 +58,8 @@ namespace Tren3
 
         private void add_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("AddStroyPage.xaml", UriKind.RelativeOrAbsolute));
+            //NavigationService.Navigate(new Uri("/Pages/AddStroyPage.xaml", UriKind.RelativeOrAbsolute));
+            NavigationService.Navigate(new AddStroyPage());
         }
 
         private void del_Click(object sender, RoutedEventArgs e)

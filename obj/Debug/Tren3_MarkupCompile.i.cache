@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 A:\WPF\Tren3\App.xaml
-71809248308
+8-1077085125
 21750853300
-17957680867
+18-1932461890
 18-119176036
-AddSkladPage.xaml;AddStroyPage.xaml;Home.xaml;Login.xaml;MainWindow.xaml;SkladPage.xaml;StroyPage.xaml;
+Pages\EditSkladPage.xaml;Pages\AddSkladPage.xaml;Pages\AddStroyPage.xaml;Pages\Home.xaml;Login.xaml;MainWindow.xaml;Pages\SkladPage.xaml;Pages\StroyPage.xaml;
 
 False
 

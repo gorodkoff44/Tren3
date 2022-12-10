@@ -16,22 +16,24 @@ using System.Windows.Shapes;
 namespace Tren3
 {
     /// <summary>
-    /// Логика взаимодействия для AddSkladPage.xaml
+    /// Логика взаимодействия для EditSkladPage.xaml
     /// </summary>
-    public partial class AddSkladPage : Page
+    public partial class EditSkladPage : Page
     {
-        private Sklad _context = new Sklad();
-        public AddSkladPage()
+        //private Tren3Entities1 _context = new Tren3Entities1();
+        private Sklad _currentSklad = new Sklad();
+        public EditSkladPage(Sklad selectedSklad)
         {
             InitializeComponent();
-            DataContext = _context;
+            _currentSklad = selectedSklad;
+            DataContext = _currentSklad;
         }
-
         private void Save_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                Tren3Entities1.GetContext().Sklad.Add(_context);
+                
+                Tren3Entities1.GetContext().Sklad.Add(_currentSklad);
                 Tren3Entities1.GetContext().SaveChanges();
                 MessageBox.Show("Успешно сохранено");
                 NavigationService.GoBack();

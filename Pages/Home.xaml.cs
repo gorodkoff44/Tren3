@@ -27,12 +27,14 @@ namespace Tren3
 
         private void BtnSklad_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("SkladPage.xaml", UriKind.RelativeOrAbsolute));
+            //NavigationService.Navigate(new Uri("/Pages/SkladPage.xaml", UriKind.RelativeOrAbsolute));
+            NavigationService.Navigate(new SkladPage());
         }
 
         private void BtnStroy_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("StroyPage.xaml", UriKind.RelativeOrAbsolute));
+            //NavigationService.Navigate(new Uri("/Pages/StroyPage.xaml", UriKind.RelativeOrAbsolute));
+            NavigationService.Navigate(new StroyPage());
         }
 
         //private void autorisebtn_Click(object sender, RoutedEventArgs e)

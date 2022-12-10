@@ -64,10 +64,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddSkladPage.xaml.cs">
+    <Compile Include="Pages\EditSkladPage.xaml.cs">
+      <DependentUpon>EditSkladPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddSkladPage.xaml.cs">
       <DependentUpon>AddSkladPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddStroyPage.xaml.cs">
+    <Compile Include="Pages\AddStroyPage.xaml.cs">
       <DependentUpon>AddStroyPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Login.xaml.cs">
@@ -91,24 +94,28 @@
     <Compile Include="Sklad.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="SkladPage.xaml.cs">
+    <Compile Include="Pages\SkladPage.xaml.cs">
       <DependentUpon>SkladPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="StroyMaterial.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="StroyPage.xaml.cs">
+    <Compile Include="Pages\StroyPage.xaml.cs">
       <DependentUpon>StroyPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="AddSkladPage.xaml">
+    <Page Include="Pages\EditSkladPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AddStroyPage.xaml">
+    <Page Include="Pages\AddSkladPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Home.xaml">
+    <Page Include="Pages\AddStroyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -124,18 +131,18 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Home.xaml.cs">
+    <Compile Include="Pages\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="SkladPage.xaml">
+    <Page Include="Pages\SkladPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="StroyPage.xaml">
+    <Page Include="Pages\StroyPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

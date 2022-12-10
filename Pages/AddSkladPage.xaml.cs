@@ -16,37 +16,31 @@ using System.Windows.Shapes;
 namespace Tren3
 {
     /// <summary>
-    /// Логика взаимодействия для AddStroyPage.xaml
+    /// Логика взаимодействия для AddSkladPage.xaml
     /// </summary>
-    public partial class AddStroyPage : Page
+    public partial class AddSkladPage : Page
     {
-        private StroyMaterial currentStroy = new StroyMaterial();
-        public AddStroyPage()
+        private Sklad _context = new Sklad();
+        public AddSkladPage()
         {
             InitializeComponent();
-            
-            DataContext = currentStroy;
+            DataContext = _context;
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                Tren3Entities1.GetContext().StroyMaterial.Add(currentStroy);
+                //var currentAgents = _context..ToList();
+                Tren3Entities1.GetContext().Sklad.Add(_context);
                 Tren3Entities1.GetContext().SaveChanges();
                 MessageBox.Show("Успешно сохранено");
                 NavigationService.GoBack();
             }
             catch
             {
-                MessageBox.Show("Ошибка. Возможно вы указали несуществующий склад");
-                //NavigationService.GoBack();
+                MessageBox.Show("Произошла ошибка!");
             }
-        }
-
-        private void ComboSklad_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }

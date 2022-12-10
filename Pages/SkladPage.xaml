@@ -23,7 +23,8 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
-                        <StackPanel Margin="20">
+                        <WrapPanel>
+                            <StackPanel Margin="20">
                             <WrapPanel>
                                 <TextBlock Text="Номер склада " />
                                 <TextBlock Text="{Binding NumSklad}" />
@@ -40,7 +41,10 @@
                                 <TextBlock Text="Расстояние: " />
                                 <TextBlock Text="{Binding Rasstoyanie}" />
                             </WrapPanel>
+                            
                         </StackPanel>
+                            <Button x:Name="Edit" Content="Редактировать" Click="Edit_Click" Width="100" Height="30" HorizontalAlignment="Right" />
+                        </WrapPanel>
                     </Grid>
                 </DataTemplate>
 
