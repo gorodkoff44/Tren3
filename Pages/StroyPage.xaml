@@ -10,20 +10,29 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100" />
+            <RowDefinition Height="50" />
             <RowDefinition />
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
         <WrapPanel>
-            <TextBlock Text="Поиск " VerticalAlignment="Center" />
-            <TextBox x:Name="SearchBox" Width="160" Height="40" Margin="10" HorizontalAlignment="Left" VerticalContentAlignment="Center" TextChanged="SearchBox_TextChanged"/>
+            <TextBlock Text="Поиск" VerticalAlignment="Center" Margin="10" />
+            <TextBox x:Name="SearchBox" Width="160" Height="30" Margin="10" HorizontalAlignment="Left" VerticalContentAlignment="Center" TextChanged="SearchBox_TextChanged"/>
+            <Button x:Name="btnUpd" Content="Обновить" Click="btnUpd_Click"  Width="100" Height="25"/>
         </WrapPanel>
         <TextBlock Text="Результаты поиска:" VerticalAlignment="Bottom"  HorizontalAlignment="Center" Visibility="Collapsed" x:Name="rezsearchtb"/>
-        <ListView Grid.Row="1" x:Name="LVStroy">
+        <ListView Grid.Row="1" x:Name="LVStroy" Margin="10">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
-                        <StackPanel Margin="20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="1">
+                            <Button x:Name="Edit" Click="Edit_Click" Content="Редактировать" Width="100" Height="30" HorizontalAlignment="Right" />
+                        </Grid>
+                        <Grid Grid.Column="0">
+                            <StackPanel Margin="20">
                             <WrapPanel>
                                 <TextBlock Text="Номер материала " />
                                 <TextBlock Text="{Binding NumMateriala}" />
@@ -45,6 +54,7 @@
                                 <TextBlock Text="{Binding IDSklad}" />
                             </WrapPanel>
                         </StackPanel>
+                        </Grid>
                     </Grid>
                 </DataTemplate>
 

@@ -59,7 +59,7 @@ namespace Tren3
         private void add_Click(object sender, RoutedEventArgs e)
         {
             //NavigationService.Navigate(new Uri("/Pages/AddStroyPage.xaml", UriKind.RelativeOrAbsolute));
-            NavigationService.Navigate(new AddStroyPage());
+            NavigationService.Navigate(new AddStroyPage(null));
         }
 
         private void del_Click(object sender, RoutedEventArgs e)
@@ -67,6 +67,16 @@ namespace Tren3
             _context.StroyMaterial.Remove((StroyMaterial)LVStroy.SelectedItem);
             _context.SaveChanges();
             UpdateStroy();
+        }
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AddStroyPage((sender as Button).DataContext as StroyMaterial));
+        }
+
+        private void btnUpd_Click(object sender, RoutedEventArgs e)
+        {
+            LVStroy.ItemsSource = _context.StroyMaterial.ToList();
         }
     }
 }

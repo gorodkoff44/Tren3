@@ -92,5 +92,10 @@ namespace Tren3
             
            
         }
+
+        private void btnUpd_Click(object sender, RoutedEventArgs e)
+        {
+            LVSklad.ItemsSource = _context.Sklad.ToList();
+        }
     }
 }

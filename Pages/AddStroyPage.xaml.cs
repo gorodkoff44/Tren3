@@ -22,10 +22,13 @@ namespace Tren3
     {
         //private Tren3Entities1 _context = new Tren3Entities1();
         private StroyMaterial _currentStroy = new StroyMaterial();
-        public AddStroyPage()
+        public AddStroyPage(StroyMaterial selectstroyMaterial)
         {
             InitializeComponent();
-            
+            if (selectstroyMaterial !=null)
+            {
+                _currentStroy = selectstroyMaterial;
+            }
             DataContext = _currentStroy;
         }
 
@@ -34,6 +37,14 @@ namespace Tren3
             try
             {
                 Tren3Entities1.GetContext().StroyMaterial.Add(_currentStroy);
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка StroyMaterial.Add");
+            }
+            try
+            {
+                
                 Tren3Entities1.GetContext().SaveChanges();
                 MessageBox.Show("Успешно сохранено");
                 NavigationService.GoBack();
@@ -43,11 +54,6 @@ namespace Tren3
                 MessageBox.Show("Ошибка. Возможно вы указали несуществующий склад");
                 //NavigationService.GoBack();
             }
-        }
-
-        private void ComboSklad_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }
