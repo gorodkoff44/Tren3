@@ -20,22 +20,22 @@ namespace Tren3
     /// </summary>
     public partial class SkladPage : Page
     {
-        private Tren3Entities _context = new Tren3Entities();
+        private Tren3Entities1 _context = new Tren3Entities1();
         public SkladPage()
         {
             
             InitializeComponent();
-            Login login = new Login();
-            if (login.tlogin == 0)
-            {
-                add.Visibility = Visibility.Collapsed;
-                del.Visibility = Visibility.Collapsed;
-            }
-            else
-            {
-                    add.Visibility = Visibility.Visible;
-                    del.Visibility = Visibility.Visible;
-            }
+            //Login login = new Login();
+            //if (login.tlogin == 0)
+            //{
+            //    add.Visibility = Visibility.Collapsed;
+            //    del.Visibility = Visibility.Collapsed;
+            //}
+            //else
+            //{
+            //        add.Visibility = Visibility.Visible;
+            //        del.Visibility = Visibility.Visible;
+            //}
             LVSklad.ItemsSource = _context.Sklad.ToList();
         }
         private void UpdateSklad()

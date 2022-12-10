@@ -35,10 +35,10 @@ namespace Tren3
             NavigationService.Navigate(new Uri("StroyPage.xaml", UriKind.RelativeOrAbsolute));
         }
 
-        private void autorisebtn_Click(object sender, RoutedEventArgs e)
-        {
-            Login login = new Login();
-            login.Show();
-        }
+        //private void autorisebtn_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Login login = new Login();
+        //    login.Show();
+        //}
     }
 }

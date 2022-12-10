@@ -13,17 +13,17 @@ namespace Tren3
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Tren3Entities : DbContext
+    public partial class Tren3Entities1 : DbContext
     {
-        private static Tren3Entities _context;
-        public Tren3Entities()
-            : base("name=Tren3Entities")
+        private static Tren3Entities1 _context;
+        public Tren3Entities1()
+            : base("name=Tren3Entities1")
         {
         }
-        public static Tren3Entities GetContext()
+        public static Tren3Entities1 GetContext()
         {
             if (_context == null)
-                _context = new Tren3Entities();
+                _context = new Tren3Entities1();
             return _context;
         }
 

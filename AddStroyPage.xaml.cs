@@ -32,8 +32,8 @@ namespace Tren3
         {
             try
             {
-                Tren3Entities.GetContext().StroyMaterial.Add(currentStroy);
-                Tren3Entities.GetContext().SaveChanges();
+                Tren3Entities1.GetContext().StroyMaterial.Add(currentStroy);
+                Tren3Entities1.GetContext().SaveChanges();
                 MessageBox.Show("Успешно сохранено");
                 NavigationService.GoBack();
             }
