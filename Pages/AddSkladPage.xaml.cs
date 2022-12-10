@@ -20,26 +20,37 @@ namespace Tren3
     /// </summary>
     public partial class AddSkladPage : Page
     {
-        private Sklad _context = new Sklad();
-        public AddSkladPage()
+        private Sklad _currentSklad = new Sklad();
+        public AddSkladPage(Sklad selectedSklad)
         {
             InitializeComponent();
-            DataContext = _context;
+            if (selectedSklad != null)
+            {
+                _currentSklad = selectedSklad;
+            }
+            DataContext = _currentSklad;
+            //Tren3Entities1.GetContext().Sklad.Remove(selectedSklad);
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                //var currentAgents = _context..ToList();
-                Tren3Entities1.GetContext().Sklad.Add(_context);
+                Tren3Entities1.GetContext().Sklad.Add(_currentSklad);
+            }
+            catch
+            {
+                MessageBox.Show("Произошла ошибка Sklad.Add\nПриложение продолжит работу");
+            }
+            try
+            {
                 Tren3Entities1.GetContext().SaveChanges();
                 MessageBox.Show("Успешно сохранено");
                 NavigationService.GoBack();
             }
             catch
             {
-                MessageBox.Show("Произошла ошибка!");
+                MessageBox.Show("Произошла ошибка SaveChanges");
             }
         }
     }

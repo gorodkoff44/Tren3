@@ -37,6 +37,7 @@ namespace Tren3
             //        del.Visibility = Visibility.Visible;
             //}
             LVSklad.ItemsSource = _context.Sklad.ToList();
+            Tren3Entities1.GetContext().SaveChanges();
             UpdateSklad();
         }
         private void UpdateSklad()
@@ -61,11 +62,17 @@ namespace Tren3
         private void add_Click(object sender, RoutedEventArgs e)
         {
             //NavigationService.Navigate(new Uri("/Pages/AddSkladPage.xaml", UriKind.RelativeOrAbsolute));
-            NavigationService.Navigate(new AddSkladPage());
+            NavigationService.Navigate(new AddSkladPage(null));
         }
 
         private void del_Click(object sender, RoutedEventArgs e)
         {
+            if (LVSklad.SelectedItem == null)
+            {
+                MessageBox.Show("Не выбран склад для удаления", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             try
             {
                 _context.Sklad.Remove((Sklad)LVSklad.SelectedItem);
@@ -80,7 +87,7 @@ namespace Tren3
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new EditSkladPage((sender as Button).DataContext as Sklad));
+            NavigationService.Navigate(new AddSkladPage((sender as Button).DataContext as Sklad));
             
             
            
