@@ -40,19 +40,17 @@ namespace Tren3
             }
             catch
             {
-                MessageBox.Show("Ошибка StroyMaterial.Add");
-            }
-            try
-            {
-                
-                Tren3Entities1.GetContext().SaveChanges();
-                MessageBox.Show("Успешно сохранено");
-                NavigationService.GoBack();
-            }
-            catch
-            {
-                MessageBox.Show("Ошибка. Возможно вы указали несуществующий склад");
-                //NavigationService.GoBack();
+
+                try
+                {
+                    Tren3Entities1.GetContext().SaveChanges();
+                    MessageBox.Show("Успешно сохранено");
+                    NavigationService.GoBack();
+                }
+                catch
+                {
+                    MessageBox.Show("Ошибка. Возможно вы указали несуществующий склад");
+                }
             }
         }
     }

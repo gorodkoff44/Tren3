@@ -36,6 +36,7 @@ namespace Tren3
         {
             try
             {
+                if(_currentSklad.NumSklad==0)
                 Tren3Entities1.GetContext().Sklad.Add(_currentSklad);
             }
             catch
