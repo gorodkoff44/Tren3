@@ -20,7 +20,6 @@ namespace Tren3
     /// </summary>
     public partial class EditSkladPage : Page
     {
-        //private Tren3Entities1 _context = new Tren3Entities1();
         private Sklad _currentSklad = new Sklad();
         public EditSkladPage(Sklad selectedSklad)
         {
@@ -32,7 +31,6 @@ namespace Tren3
         {
             try
             {
-                
                 TrenEntities.GetContext().Sklad.Add(_currentSklad);
                 TrenEntities.GetContext().SaveChanges();
                 MessageBox.Show("Успешно сохранено");
