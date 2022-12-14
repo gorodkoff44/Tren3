@@ -36,14 +36,14 @@ namespace Tren3
         {
             try
             {
-                Tren3Entities1.GetContext().StroyMaterial.Add(_currentStroy);
+                TrenEntities.GetContext().StroyMaterial.Add(_currentStroy);
             }
             catch
             {
 
                 try
                 {
-                    Tren3Entities1.GetContext().SaveChanges();
+                    TrenEntities.GetContext().SaveChanges();
                     MessageBox.Show("Успешно сохранено");
                     NavigationService.GoBack();
                 }

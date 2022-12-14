@@ -12,26 +12,27 @@ namespace Tren3
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
-    public partial class Tren3Entities1 : DbContext
+
+    public partial class TrenEntities : DbContext
     {
-        private static Tren3Entities1 _context;
-        public Tren3Entities1()
-            : base("name=Tren3Entities1")
+        private static TrenEntities _context = new TrenEntities();
+        public TrenEntities()
+            : base("name=TrenEntities")
         {
         }
-        public static Tren3Entities1 GetContext()
+        public static TrenEntities GetContext()
         {
             if (_context == null)
-                _context = new Tren3Entities1();
+                _context = new TrenEntities();
             return _context;
+
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+
         public virtual DbSet<Sklad> Sklad { get; set; }
         public virtual DbSet<StroyMaterial> StroyMaterial { get; set; }
     }

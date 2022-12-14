@@ -20,7 +20,7 @@ namespace Tren3
     /// </summary>
     public partial class StroyPage : Page
     {
-        private Tren3Entities1 _context = new Tren3Entities1();
+        private TrenEntities _context = new TrenEntities();
         public StroyPage()
         {
             InitializeComponent();

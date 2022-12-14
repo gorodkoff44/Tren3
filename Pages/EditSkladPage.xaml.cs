@@ -33,8 +33,8 @@ namespace Tren3
             try
             {
                 
-                Tren3Entities1.GetContext().Sklad.Add(_currentSklad);
-                Tren3Entities1.GetContext().SaveChanges();
+                TrenEntities.GetContext().Sklad.Add(_currentSklad);
+                TrenEntities.GetContext().SaveChanges();
                 MessageBox.Show("Успешно сохранено");
                 NavigationService.GoBack();
             }

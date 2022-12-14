@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Хранилище Tren3Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="Хранилище Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Sklad">
     <Key>
       <PropertyRef Name="NumSklad" />
     </Key>
     <Property Name="NumSklad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Address" Type="nvarchar" MaxLength="50" />
-    <Property Name="TypeMaterialiv" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="TypeMaterialiv" Type="nvarchar" MaxLength="100" />
     <Property Name="Rasstoyanie" Type="int" />
   </EntityType>
   <EntityType Name="StroyMaterial">
@@ -31,7 +31,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="Хранилище Tren3ModelContainer">
+  <EntityContainer Name="Хранилище ModelContainer">
     <EntitySet Name="Sklad" EntityType="Self.Sklad" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="StroyMaterial" EntityType="Self.StroyMaterial" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_StroyMaterial_Sklad" Association="Self.FK_StroyMaterial_Sklad">

@@ -20,7 +20,7 @@ namespace Tren3
     /// </summary>
     public partial class SkladPage : Page
     {
-        private Tren3Entities1 _context = new Tren3Entities1();
+        private TrenEntities _context = new TrenEntities();
         public SkladPage()
         {
             
@@ -37,7 +37,7 @@ namespace Tren3
             //        del.Visibility = Visibility.Visible;
             //}
             LVSklad.ItemsSource = _context.Sklad.ToList();
-            Tren3Entities1.GetContext().SaveChanges();
+            TrenEntities.GetContext().SaveChanges();
             UpdateSklad();
         }
         private void UpdateSklad()

@@ -37,7 +37,7 @@ namespace Tren3
             try
             {
                 if(_currentSklad.NumSklad==0)
-                Tren3Entities1.GetContext().Sklad.Add(_currentSklad);
+                TrenEntities.GetContext().Sklad.Add(_currentSklad);
             }
             catch
             {
@@ -45,7 +45,7 @@ namespace Tren3
             }
             try
             {
-                Tren3Entities1.GetContext().SaveChanges();
+                TrenEntities.GetContext().SaveChanges();
                 MessageBox.Show("Успешно сохранено");
                 NavigationService.GoBack();
             }

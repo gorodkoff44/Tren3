@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Tren3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Sklad">
     <Key>
       <PropertyRef Name="NumSklad" />
     </Key>
     <Property Name="NumSklad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="TypeMaterialiv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TypeMaterialiv" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Rasstoyanie" Type="Int32" />
     <NavigationProperty Name="StroyMaterial" Relationship="Self.FK_StroyMaterial_Sklad" FromRole="Sklad" ToRole="StroyMaterial" />
   </EntityType>
@@ -33,7 +33,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="Tren3Entities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="TrenEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Sklad" EntityType="Self.Sklad" />
     <EntitySet Name="StroyMaterial" EntityType="Self.StroyMaterial" />
     <AssociationSet Name="FK_StroyMaterial_Sklad" Association="Self.FK_StroyMaterial_Sklad">

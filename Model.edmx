@@ -4,14 +4,14 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище Tren3Model1" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Sklad">
           <Key>
             <PropertyRef Name="NumSklad" />
           </Key>
           <Property Name="NumSklad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Address" Type="nvarchar" MaxLength="50" />
-          <Property Name="TypeMaterialiv" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" />
+          <Property Name="TypeMaterialiv" Type="nvarchar" MaxLength="100" />
           <Property Name="Rasstoyanie" Type="int" />
         </EntityType>
         <EntityType Name="StroyMaterial">
@@ -36,7 +36,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Хранилище Tren3Model1Container">
+        <EntityContainer Name="Хранилище ModelContainer">
           <EntitySet Name="Sklad" EntityType="Self.Sklad" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StroyMaterial" EntityType="Self.StroyMaterial" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_StroyMaterial_Sklad" Association="Self.FK_StroyMaterial_Sklad">
@@ -48,14 +48,14 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Tren3Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Sklad">
           <Key>
             <PropertyRef Name="NumSklad" />
           </Key>
           <Property Name="NumSklad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TypeMaterialiv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TypeMaterialiv" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Rasstoyanie" Type="Int32" />
           <NavigationProperty Name="StroyMaterial" Relationship="Self.FK_StroyMaterial_Sklad" FromRole="Sklad" ToRole="StroyMaterial" />
         </EntityType>
@@ -82,7 +82,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Tren3Entities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="TrenEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Sklad" EntityType="Self.Sklad" />
           <EntitySet Name="StroyMaterial" EntityType="Self.StroyMaterial" />
           <AssociationSet Name="FK_StroyMaterial_Sklad" Association="Self.FK_StroyMaterial_Sklad">
@@ -95,9 +95,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище Tren3Model1Container" CdmEntityContainer="Tren3Entities1">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ModelContainer" CdmEntityContainer="TrenEntities">
           <EntitySetMapping Name="Sklad">
-            <EntityTypeMapping TypeName="Tren3Model1.Sklad">
+            <EntityTypeMapping TypeName="Model.Sklad">
               <MappingFragment StoreEntitySet="Sklad">
                 <ScalarProperty Name="NumSklad" ColumnName="NumSklad" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
@@ -107,7 +107,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="StroyMaterial">
-            <EntityTypeMapping TypeName="Tren3Model1.StroyMaterial">
+            <EntityTypeMapping TypeName="Model.StroyMaterial">
               <MappingFragment StoreEntitySet="StroyMaterial">
                 <ScalarProperty Name="NumMateriala" ColumnName="NumMateriala" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
