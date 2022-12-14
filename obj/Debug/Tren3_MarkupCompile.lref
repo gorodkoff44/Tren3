@@ -1,18 +1,11 @@
 ﻿
 
-<<<<<<< Updated upstream
-FC:\Users\comp0705\Desktop\Data\Tren3\WPF\Tren3\Home.xaml;;
+FC:\Users\comp0705\Desktop\Data\Tren3\WPF\Tren3\Pages\EditSkladPage.xaml;;
+FC:\Users\comp0705\Desktop\Data\Tren3\WPF\Tren3\Pages\AddSkladPage.xaml;;
+FC:\Users\comp0705\Desktop\Data\Tren3\WPF\Tren3\Pages\AddStroyPage.xaml;;
+FC:\Users\comp0705\Desktop\Data\Tren3\WPF\Tren3\Pages\Home.xaml;;
+FC:\Users\comp0705\Desktop\Data\Tren3\WPF\Tren3\Login.xaml;;
 FC:\Users\comp0705\Desktop\Data\Tren3\WPF\Tren3\MainWindow.xaml;;
-FC:\Users\comp0705\Desktop\Data\Tren3\WPF\Tren3\SkladPage.xaml;;
-FC:\Users\comp0705\Desktop\Data\Tren3\WPF\Tren3\StroyPage.xaml;;
-FC:\Users\comp0705\Desktop\Data\Tren3\WPF\Tren3\AddSkladPage.xaml;;
-=======
-FA:\WPF\Tren3\AddSkladPage.xaml;;
-FA:\WPF\Tren3\AddStroyPage.xaml;;
-FA:\WPF\Tren3\Home.xaml;;
-FA:\WPF\Tren3\Login.xaml;;
-FA:\WPF\Tren3\MainWindow.xaml;;
-FA:\WPF\Tren3\SkladPage.xaml;;
-FA:\WPF\Tren3\StroyPage.xaml;;
->>>>>>> Stashed changes
+FC:\Users\comp0705\Desktop\Data\Tren3\WPF\Tren3\Pages\SkladPage.xaml;;
+FC:\Users\comp0705\Desktop\Data\Tren3\WPF\Tren3\Pages\StroyPage.xaml;;
 

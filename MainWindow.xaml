@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tren3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" MinWidth="500" MinHeight="500">
     <Grid>
-        <Frame Source="Home.xaml" />
+        <Frame Source="Pages\Home.xaml" />
     </Grid>
 </Window>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Sklad">
+    <Key>
+      <PropertyRef Name="NumSklad" />
+    </Key>
+    <Property Name="NumSklad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="TypeMaterialiv" Type="nvarchar" MaxLength="100" />
+    <Property Name="Rasstoyanie" Type="int" />
+  </EntityType>
+  <EntityType Name="StroyMaterial">
+    <Key>
+      <PropertyRef Name="NumMateriala" />
+    </Key>
+    <Property Name="NumMateriala" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="EdIzm" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ostatok" Type="int" />
+    <Property Name="IDSklad" Type="int" />
+  </EntityType>
+  <Association Name="FK_StroyMaterial_Sklad">
+    <End Role="Sklad" Type="Self.Sklad" Multiplicity="0..1" />
+    <End Role="StroyMaterial" Type="Self.StroyMaterial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sklad">
+        <PropertyRef Name="NumSklad" />
+      </Principal>
+      <Dependent Role="StroyMaterial">
+        <PropertyRef Name="IDSklad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище ModelContainer">
+    <EntitySet Name="Sklad" EntityType="Self.Sklad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StroyMaterial" EntityType="Self.StroyMaterial" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_StroyMaterial_Sklad" Association="Self.FK_StroyMaterial_Sklad">
+      <End Role="Sklad" EntitySet="Sklad" />
+      <End Role="StroyMaterial" EntitySet="StroyMaterial" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
